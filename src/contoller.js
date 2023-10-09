@@ -11,7 +11,7 @@ const uploadFile = async (req, res) => {
 
 const getFile = async (req, res) => {
   try {
-    const Obj = await get(req.body);
+    const Obj = await get(req.params.file_name);
     res.send(Obj);
   } catch (error) {
     throw error;
